@@ -1,14 +1,12 @@
 print("KIỂM TRA SỐ NGUYÊN TÓ:")
-number = eval(input("Nhập số: "))
-if number%1==0 and number%number==0:
-    print(f"Số {number} là số nguyên tố.")
+n = int(input("Nhập số: "))
+if n > 1:
+    for i in range(2, n):
+        if n % i == 0:
+            print("Đây không là số nguyên tố")
+            break
+        else:
+            print("Đây là số nguyên tố")
+            break
 else:
-    print(f"Số {number} không phải số nguyên tố.")
-
-
-
-
-
-
-
-
+    print("Đây không là số nguyên tố")

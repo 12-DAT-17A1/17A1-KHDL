@@ -3,6 +3,7 @@ def UCLN(a, b):
         a, b = b, a % b
     return a
 
+
 # Nhập hai số nguyên từ bàn phím
 num1 = int(input("Nhập số nguyên thứ nhất: "))
 num2 = int(input("Nhập số nguyên thứ hai: "))
@@ -12,20 +13,10 @@ result = UCLN(num1, num2)
 print("Ước chung lớn nhất của", num1, "và", num2, "là:", result)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Cách 2
+def ucln(a, b):
+    if a > b:
+        a = a - b
+    else:
+        b = b - a
+    return a
