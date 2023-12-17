@@ -19,14 +19,28 @@ for i in range(1, n + 1):
     if i % 3 == 0:
         tich1 *= i
 print(f"Tích các số chia hết cho 3 nhỏ hơn hay bằng {n} là:", tich1)
-sum = 0
-for i in range(n + 1):
-    sum += 1
-print(f"Tổng các số nguyên tố nhỏ hơn hay bằng {n} là:", sum)
+
+
+def snt(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
+if __name__ == "__main__":
+    tong = 0
+    for i in range(2, n + 1):
+        if snt(i):
+            tong += i
+    print(f"Tổng các số nguyên tố nhỏ hơn hay bằng {n} là:", tong - 2)
 sum2 = 0
 for i in range(1, n + 1):
-    i = 1 / i
-    if i % 2 != 0:
-        i = (0 - i) / (i + 1)
+    if i % 2 == 0:
+        i = -1 / i
+    else:
+        i = 1 / i
     sum2 += i
-print("Tổng chuỗi đan dấu là: ", sum2)
+print("Tổng chuỗi đan dấu là: ", round(sum2, 2))

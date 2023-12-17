@@ -1,6 +1,6 @@
+from math import abs
 
-from math import *
 print("TÌM TRỊ TUYỆT ĐỐI CỦA SỐ a")
 a = eval(input("Nhập số a = "))
 x = abs(a)
-print(f"Trị tuyệt đối của {a} là:",x)
+print(f"Trị tuyệt đối của {a} là:", x)
