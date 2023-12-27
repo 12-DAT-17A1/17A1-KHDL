@@ -4,7 +4,7 @@ from functools import reduce
 def ktr(lst):
     for i in lst:
         if i >= 5:
-            return False # 5 ko phải là số lớn nhất 
+            return False  # 5 ko phải là số lớn nhất
     return True
 
 
@@ -17,7 +17,7 @@ for i in range(1, spt + 1):
     nhap = int(input(f"Nhập giá trị thứ {i}: "))
     lst.append(nhap)
 print("List:", lst)
-# Tính tổng các phần tử trong list.(function reduce, lambda)
+# Tính tổng các phần tử trong list.(function reduce, lambda)😁
 list_sum = reduce(lambda x, y: x + y, lst)
 print("Tổng các phần tử trong list là:", list_sum)
 dem = lst.count(check)
